@@ -1,24 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const ชื่อ = "เจษ";
-const นามสกุล = "สิทธิฯ";
-const มื้อ = 4;
+const name = "Jedt";
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
 
 ReactDOM.render(
   <div>
-    {/* <h1>อาหารที่ {ชื่อ + " " + นามสกุล} ชอบ</h1> */}
-    <h1>อาหารที่ {`${ชื่อ} ${นามสกุล}`} ชอบ</h1>
-    <ul>
-      <li>มะม่วง</li>
-      <li>ทุเรียน</li>
-      <li>เงาะ</li>
-    </ul>
-    <p>
-      {ชื่อ}กินวันละ {มื้อ} ครั้ง
-      <br />
-      เฉลี่ยทานครั้งละ {Math.floor(Math.random() * 100)} บาท
-    </p>
+    <p>Created by {name}</p>
+    {/* <p>Copyright &copy; {currentYear}</p> */}
+    <p>Copyright &copy; {currentDate.getFullYear()}</p>
   </div>,
   document.getElementById("root")
 );
